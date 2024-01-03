@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+header.site-header {
+    background: #40ABE8;
+    height: 12vh;
+}
+
+.title {
+    margin-right: auto;
+}
+
+.container-header {
+    width: 90%;
+    height: 100%;
+    padding-right: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header img {
+    height: 40px;
+    width: 60px;
+}
+
+.container-header p {
+    padding-left: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container-header nav {
+    float: right;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    text-decoration: underline;
+}
+
+.container-body {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-text {
+    padding: 4rem 6rem;
+    width: 55%;
+}
+
+.body-content {
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.body-content h1 {
+    font-style: normal;
+    font-weight: 700;
+    color: #2E363F;
+    margin-bottom: 3vh;
+    text-align: left;
+}
+
+.body-content p {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: #9E9E9F;
+    text-align: justify;
+}
+
+.container-button {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    padding-left: 4rem;
+    justify-content: left;
+}
+
+.container-button a {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 1.3rem 5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container-button a:hover {
+    background-color: #343A40;
+    cursor: pointer;
+}
+
+.primary-button i {
+    margin-right: 0.6rem;
+}
+
+.container-image {
+    width: 45%;
+}
+
+.image-content {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image-content img {
+    padding-top: 5vh;
+}
+
+
+
+
+
+

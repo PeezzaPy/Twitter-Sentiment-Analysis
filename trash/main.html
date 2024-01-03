@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">     
+        {% comment %} icon for socmed {% endcomment %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Your HTML with Font Awesome icons -->
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <h1 class="text-center">Sign in</h1>
+                    <div class="vl">
+                        <span class="vl-innertext">or</span>
+                    </div>
+
+                    <div class="col1">
+                        <a class="fb btn">
+                            <i style="margin-right: 5px;" class="fa fa-facebook fa-fw"></i> Login with Facebook
+                        </a>
+                        <a class="twitter btn">
+                            <i style="margin-right: 5px;" class="fa fa-twitter fa-fw"></i> Login with Twitter
+                        </a>
+                        <a class="google btn">
+                            <i style="margin-right: 5px;" class="fa fa-google fa-fw"></i> Login with Google
+                        </a>
+                    </div>
+
+                    <div class="col2">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" value="Login">
+                    </div>
+                </div>
+
+                {% comment %} <div></div> {% endcomment %}
+            </form>
+        </div>
+    </body>
+</html>

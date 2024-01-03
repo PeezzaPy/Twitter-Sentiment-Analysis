@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+header.site-header {
+    background: #40ABE8;
+    height: 12vh;
+}
+
+.container-header {
+    width: 90%;
+    height: 100%;
+    padding-right: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin-right: auto;
+}
+
+.container-header img {
+    height: 40px;
+    width: 60px;
+}
+
+.container-header p {
+    padding-left: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container-header nav {
+    float: right;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    text-decoration: underline;
+}
+
+.container-image, .container-title {
+    width: 70%;
+}
+
+.container-title {
+    height: 150px;
+    margin: 15px auto 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container-title p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.container-image {
+    height: 280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.image-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-info img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+}
+
+.image-info p {
+    padding: 1.5rem 3rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-socmed ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-socmed li {
+    margin-right: 7px;
+    margin-left: 7px;
+    border-radius: 25%;
+    padding: 10px 10px 7px 10px;
+    background-color: #ecebeb; 
+}
+
+.nav-socmed i {
+    font-size: 30px;
+}
+
+.nav-socmed li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* icon colors */
+.fb-color {
+    color: #0866FF;
+}
+
+.insta-color {
+    color: #BC2A8D;
+}
+
+.twitter-color {
+    color: black;
+}
