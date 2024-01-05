@@ -14,7 +14,7 @@ body {
 
 header.site-header {
     background: #40ABE8;
-    height: 12vh;
+    height: 10vh;
 }
 
 .title {
@@ -63,6 +63,7 @@ header.site-header {
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
+    padding-left: 30px;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -171,6 +172,87 @@ header.site-header {
     transform: scale(1.1);
 }
 
+/* basta hiwalay to tangina AHAHAHHA*/
+
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+
+
+.tweet-container {
+  width: 60%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #40ABE8;
+  padding: 30px;
+  /* style */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+
+
+.item {
+    width: 100%;
+    height: 125px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.item p {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.item h3{
+    margin-left: 10px;
+}
+
+.analysis-button {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.analysis-button a {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 1.3rem 5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.analysis-button a:hover {
+    background-color: #657786;
+    cursor: pointer;
+}
+
+.home-title-container {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    color: black;
+}
 
 
 
