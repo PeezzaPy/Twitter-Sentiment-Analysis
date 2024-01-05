@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/about-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
     </head>
     <body>
         <header class="site-header">
@@ -14,59 +15,59 @@
                     <ul class="nav-links">
                         <li><a href="{{ url_for('index') }}">Home</a></li>
                         <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
-                        <li><a href="#" id="acknowledgement-link">Acknowledgement</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="container-title">
-                <p>ABOUT US</p>
-            </div>
-            <div class="container-image">
-                <div class="image-info">
-                    <img src="{{ url_for('static', filename='images/marasigan-pic.jpg') }}" alt="marasigan-img"/>
-                    <p>Patrick Marasigan</p>
-                    <nav class="nav-socmed">
-                        <ul>
-                            <li><a href="https://www.facebook.com/johnpatrick.marasigan.125" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
-                            <li><a href="https://www.instagram.com/jp_mrsg?igsh=ZGNjOWZkYTE3MQ%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="image-info">
-                    <img src="{{ url_for('static', filename='images/gabaon-pic.jpg') }}" alt="gabaon-img"/>
-                    <p>Deniece Gabaon</p>
-                    <nav class="nav-socmed">
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100008997394826" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
-                            <li><a href="https://www.instagram.com/dencia_gbn?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="image-info">
-                    <img src="{{ url_for('static', filename='images/agullo-pic.jpg') }}" alt="agullo-img"/>
-                    <p>Jhan Kyle Agullo</p>
-                    <nav class="nav-socmed">
-                        <ul>
-                            <li><a href="https://www.facebook.com/JkyleAgullo" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
-                            <li><a href="https://www.instagram.com/jkyleagullo?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="image-info">    
-                    <img src="{{ url_for('static', filename='images/twitter-sentiment-image.jpg') }}" alt="navale-img"/>
-                    <p>Matthew Navale</p>
-                    <nav class="nav-socmed">
-                        <ul>
-                            <li><a href="https://www.facebook.com/matthewanavale" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
-                            <li><a href="https://www.instagram.com/_matthewan?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
         </header>
+        <div class="container-title">
+            <p>ABOUT US</p>
+        </div>
+        <div class="container-image">
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/marasigan-pic.jpg') }}" alt="marasigan-img"/>
+                <p>Patrick Marasigan</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/johnpatrick.marasigan.125" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://www.instagram.com/jp_mrsg?igsh=ZGNjOWZkYTE3MQ%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/gabaon-pic.jpg') }}" alt="gabaon-img"/>
+                <p>Deniece Gabaon</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100008997394826" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://www.instagram.com/dencia_gbn?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/agullo-pic.jpg') }}" alt="agullo-img"/>
+                <p>Jhan Kyle Agullo</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/JkyleAgullo" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://www.instagram.com/jkyleagullo?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">    
+                <img src="{{ url_for('static', filename='images/twitter-sentiment-image.jpg') }}" alt="navale-img"/>
+                <p>Matthew Navale</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/matthewanavale" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://www.instagram.com/_matthewan?igsh=ZGNjOWZkYTE3MQ==" target="_blank"><i class="fab fa-instagram insta-color"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter twitter-color"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </body>
 </html>

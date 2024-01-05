@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
     </head>
     <body>
         <header class="site-header">
@@ -14,7 +15,7 @@
                     <ul class="nav-links">
                         <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
                         <li><a href="{{ url_for('about') }}">About Us</a></li>
-                        <li><a href="#" id="acknowledgement-link">Acknowledgement</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
                     </ul>
                 </nav>
             </div>
@@ -33,7 +34,7 @@
                 </div>
                 <div class="container-button">
                     <a class="primary-button" href="{{ url_for('login') }}">
-                        <i class="fab fa-twitter"></i> Sign in with Twitter
+                        <i class="fab fa-twitter"></i> Start Analyzing Tweets
                     </a>
                 </div>
             </div>

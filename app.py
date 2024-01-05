@@ -22,6 +22,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/acknowledgement')
+def acknowledgement():
+    return render_template('acknowledgement.html')
+
 @app.route('/login')
 def login():
     # Generate the Twitter authentication URL
