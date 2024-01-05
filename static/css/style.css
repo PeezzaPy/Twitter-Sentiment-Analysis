@@ -72,9 +72,10 @@ header.site-header {
 
 .container-body {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: row;
+    padding: 0px 10% 0px 10%;
 }
 
 .container-text {
@@ -85,7 +86,7 @@ header.site-header {
 
 .body-content {
     
-    height: 45%;
+    height: 40%;
     width: 80%;
     margin: 0 auto;
 }
@@ -102,7 +103,7 @@ header.site-header {
     font-style: normal;
     font-size: 18px;
     font-weight: 400;
-    color: #9E9E9F;
+    color: #707070;
     text-align: justify;
 }
 
@@ -194,6 +195,7 @@ header.site-header {
   align-items: flex-start;
   justify-content: space-between;
   overflow: auto;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 
