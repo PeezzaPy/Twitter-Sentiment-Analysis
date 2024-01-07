@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    
     <title>TweetPulse.</title>
     
 </head>
@@ -16,7 +17,7 @@
 
     <header class="site-header">
         <div class="container-header">
-            <a href="{{url_for('index')}}"><img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo"></a>
+            <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/header-logo.svg') }}" alt="header-logo"></a>
             <p class="title"> TWEETPULSE.</p>
             <nav>
                 <ul class="nav-links">

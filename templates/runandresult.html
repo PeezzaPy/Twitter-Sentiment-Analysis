@@ -17,7 +17,7 @@
 <body>
     <header class="site-header">
         <div class="container-header">
-            <a href="{{url_for('index')}}"><img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo"></a>
+            <a href="{{url_for('index')}}"><img src={{url_for('static', filename='images/header-logo.svg')}} alt="header-logo"></a>
             <p class="title"> TWEETPULSE.</p>
             <nav>
                 <ul class="nav-links">
@@ -42,7 +42,7 @@
     <!--AAYUSIN KO PA TO IDOL AH-->
         <div class="tweet-container">
             <div class="item item-1"> 
-                <h3> @JkyleAgullo </h3>
+                <h3> {{username}}</h3>
                 <p> Pagod na pagod na akong mag-aral.😭#EtitKoMalaki</p>
                 <p> Sentiment: 😀 0% 😐 50% 😠 50%</p>
             </div>

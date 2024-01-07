@@ -150,6 +150,8 @@ header.site-header {
 
 /* END OF HOME PAGE CSS */
 
+/* run and result css */
+
 .runandresulthomepage p, button{
     display: flex;
     justify-content: center;
@@ -197,8 +199,6 @@ header.site-header {
   overflow: auto;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .item {
     width: 100%;
@@ -253,6 +253,149 @@ header.site-header {
     padding-left: 20%;
     padding-right: 20%;
     text-align: center;
+    color: black;
+}
+
+
+/* run and result CSS */
+.ack-container {
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title-body {
+    font-style: normal;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.container-description {
+    width: 100%;
+    display: flex;
+}
+
+.container-description img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#title {
+    padding: 1rem 2rem;
+}
+
+#citation {
+    padding: 3rem 2rem 1rem 2rem;
+}
+.content p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.content ul {
+    padding-right: 2rem;
+    padding-left: 4rem;
+    text-align: justify;
+}
+
+.content li {
+    padding-left: 0.5rem;
+}
+
+/* about us css */
+
+.container-picture {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-title {
+    height: 150px;
+    margin: 15px auto;
+    padding-left: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.container-title p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.container-image {
+    height: 280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.image-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-info img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+}
+
+.image-info p {
+    padding: 1.5rem 3rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-socmed ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.nav-socmed li {
+    margin-right: 7px;
+    margin-left: 7px;
+    border-radius: 25%;
+    padding: 10px 10px 7px 10px;
+    background-color: #ecebeb; 
+}
+
+.nav-socmed i {
+    font-size: 30px;
+}
+
+.nav-socmed li:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* icon colors */
+.fb-color {
+    color: #0866FF;
+}
+
+.insta-color {
+    color: #BC2A8D;
+}
+
+.twitter-color {
     color: black;
 }
 

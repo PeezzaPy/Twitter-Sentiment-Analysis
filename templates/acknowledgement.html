@@ -9,13 +9,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
     <title>TweetPulse.</title>
     
 </head>
 <body>
-    <p> This is the acknowledgement page </p>
+
+    <header class="site-header">
+        <div class="container-header">
+            <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/header-logo.svg') }}" alt="header-logo"></a>
+            <p class="title"> TWEETPULSE.</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{url_for('runandresult')}}" class="active">Home</a></li>
+                    <li><a href="{{url_for('aboutus')}}">About Us</a></li>
+                    <li><a href="{{url_for('acknowledgement')}}">Acknowledgement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
+    <div class="ack-container">
+        <p class="title-body">ACKNOWLEDGEMENT</p>
+        <section class="container-description">
+            <img src="{{url_for('static', filename='images/anthology.jpg')}}" alt="image">
+
+            <div class="content">
+                <h1 id="title"> ACL ANTHOLOGY</h1>
+                <p>
+                    We would like to thank ACL ANTHOLOGY for providing the study, 
+                    TweetEval: Unified Benchmark and Comparative Evaluation for Tweet 
+                    Classification in which we have used the study model uploaded on 
+                    HUGGING FACE. The website provided transformers library and we use 
+                    it as an API to process tweets for sentiment analysis.
+                </p>
+
+                <h1 id="citation">CITATION</h1>
+                <ul>
+                    <li>
+                        Francesco Barbieri, Jose Camacho-Collados, Luis Espinosa Anke, and 
+                        Leonardo Neves. 2020. TweetEval: Unified Benchmark and Comparative 
+                        Evaluation for Tweet Classification. In Findings of the Association 
+                        for Computational Linguistics: EMNLP 2020, pages 1644 to 1650, Online. 
+                        Association for Computational Linguistics.
+                    </li>
+                    <li>
+                        [TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification]
+                        (https://aclanthology.org/2020.findings-emnlp.148) (Barbieri et al., Findings 2020)
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
