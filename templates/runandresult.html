@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main-style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+    <title>TweetPulse.</title>
+    <!--Google Fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <header class="site-header">
+        <div class="container-header">
+            <img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo">
+            <p class="title">TWEETPULSE</p>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="home-title-container">
+        <div class="title-content">
+            <h1> Twitter Sentiment Analysis </h1>
+        </div>
+    </div>
+
+    <div class="tweet-container">
+        {% for tweet_structure in tweet_structures %}
+            <div class="item item-1"> 
+                <h3> {{ tweet_structure.username }}</h3>
+                <p> {{ tweet_structure.tweet }}</p>
+                <p> 
+                    Sentiment: 
+                    😀 {{ tweet_structure.analysis.get('Negative') }}%
+                    😐 {{ tweet_structure.analysis.get('Neutral') }}% 
+                    😠 {{ tweet_structure.analysis.get('Positive') }}% 
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="analysis-button">
+        <a class="body-button" href="#"> Run Analysis </a>
+    </div>
+    </body>
+</html>
