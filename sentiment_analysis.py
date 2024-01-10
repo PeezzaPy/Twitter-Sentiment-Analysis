@@ -2,6 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from TwitterUser import TwitterUser
 from scipy.special import softmax
 import concurrent.futures
+import asyncio
 import pandas as pd
 
 # Initialize variables for model
@@ -22,7 +23,7 @@ def load_model():
 
 def load_csv(file):
     dataFrame = pd.read_csv(file, nrows=200000)
-    random_row = dataFrame.sample(n=12)              # change depends on how many do you want to retrieve
+    random_row = dataFrame.sample(n=100)              # change depends on how many do you want to retrieve
 
     dataset = [(row[1], row[4], row[5]) for row in random_row.itertuples(index=False)]
 
@@ -30,12 +31,9 @@ def load_csv(file):
 
 
 def analyze():
-    # Load csv (excel) file
     excel_file_path = "dataset/training.1600000.processed.noemoticon.csv"
     dataset = load_csv(excel_file_path)
-    load_model()
-
-    num_thread = 4
+    num_thread = 6
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_thread) as executor:
         chunk_size = len(dataset) // num_thread
@@ -49,15 +47,14 @@ def analyze():
     return analyzed_tweet
 
 
-
-
 def analyze_thread(tweets):
     for i in range(len(tweets)):
         tweet = tweets[i]
+
         twitter_user = TwitterUser(tweet[1], tweet[2])
         tweet_words = []
 
-        for word in twitter_user.tweet.split(' '):        # load the tweet element (third column)
+        for word in twitter_user.tweet.split(' '):        # load the tweet attribute
             if word.startswith('@') and len(word) > 1:
                 word = '@user'
 
@@ -85,8 +82,3 @@ def analyze_thread(tweets):
         
         # Append the temp_list 
         analyzed_tweet.append((twitter_user))
-
-
-
-if __name__ == "__main__":
-    analyze()
