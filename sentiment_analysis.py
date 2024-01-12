@@ -23,7 +23,7 @@ def load_model():
 
 def load_csv(file):
     dataFrame = pd.read_csv(file, nrows=200000)
-    random_row = dataFrame.sample(n=100)              # change depends on how many do you want to retrieve
+    random_row = dataFrame.sample(n=15)              # change depends on how many do you want to retrieve
 
     dataset = [(row[1], row[4], row[5]) for row in random_row.itertuples(index=False)]
 
@@ -31,9 +31,14 @@ def load_csv(file):
 
 
 def analyze():
+    global analyzed_tweet
+
+    # Clear values
+    analyzed_tweet = []
+    
     excel_file_path = "dataset/training.1600000.processed.noemoticon.csv"
     dataset = load_csv(excel_file_path)
-    num_thread = 6
+    num_thread = 3
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=num_thread) as executor:
         chunk_size = len(dataset) // num_thread
@@ -54,7 +59,7 @@ def analyze_thread(tweets):
         twitter_user = TwitterUser(tweet[1], tweet[2])
         tweet_words = []
 
-        for word in twitter_user.tweet.split(' '):        # load the tweet attribute
+        for word in twitter_user.tweet.split(' '):        # load the tweet element (third column)
             if word.startswith('@') and len(word) > 1:
                 word = '@user'
 
@@ -82,3 +87,9 @@ def analyze_thread(tweets):
         
         # Append the temp_list 
         analyzed_tweet.append((twitter_user))
+
+
+
+
+# if __name__ == "__main__":
+#     analyze()

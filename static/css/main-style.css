@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+.container-body {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10% 0px 10%;
+}
+
+.container-text {
+    padding: 4rem 6rem;
+    width: 55%;
+    
+}
+
+.body-content {
+    
+    height: 40%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.body-content h1 {
+    font-style: normal;
+    font-weight: 700;
+    color: #2E363F;
+    margin-bottom: 3vh;
+    text-align: left;
+}
+
+.body-content p {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    text-align: justify;
+}
+
+.container-button {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    padding-left: 10%;
+    justify-content: left;
+}
+
+.container-button a {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 1.3rem 5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.container-button a:hover {
+    background-color: #343A40;
+    cursor: pointer;
+}
+
+.primary-button i {
+    margin-right: 0.6rem;
+}
+
+.container-image {
+    width: 45%;
+}
+
+.image-content {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.image-content img {
+    padding-top: 5vh;
+}
+
+/* END OF HOME PAGE CSS */
+
+.runandresulthomepage p, button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+
+.runandresulthomepage button{
+    color: #1D9AF2;
+    background-color: #292D3E;
+    border: 1px solid #1D9AF2;
+    border-radius: 4px;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 32px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+.runandresulthomepage button:hover {
+    transform: scale(1.1);
+}
+
+/* basta hiwalay to tangina AHAHAHHA*/
+
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #e11d48;
+}
+
+
+.tweet-container {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #40ABE8;
+  padding: 30px;
+  /* style */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.item {
+    width: 100%;
+    height: 125px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.item p {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.item h3{
+    margin-left: 10px;
+}
+
+.analysis-button {
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.analysis-button a {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 1.3rem 5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.analysis-button a:hover {
+    background-color: #657786;
+    cursor: pointer;
+}
+
+.home-title-container {
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.title-contant h1 {
+    color: black;
+}
+
+.title-content p {
+    color: #495057;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+
