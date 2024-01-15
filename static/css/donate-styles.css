@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #d7d8d9;
+    background-color: #1d2a35; 
+}
+
+.container-main-gcash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 3rem auto;
+    width: 90%;
+}
+
+.container-gcash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12vw;
+    background-color: #38444d;
+    border-radius: 30px;
+}
+
+.gcash-description {
+    height: 100%;
+    width: 50%;
+    margin: 0 6vw;
+    padding: 3rem;
+}
+
+.container-gcash img {
+    width: 400px;
+    height: auto;
+    padding: 2rem;
+} 
+
+.gcash-description p {
+    font-size: 3vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .container-main-gcash {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem auto;
+        width: 100%;
+    }
+
+    .container-gcash {
+        margin: 0;
+    }
+
+    .gcash-description {
+        width: 100%;
+    }
+
+    .gcash-description p {
+        font-size: 22px;
+        font-weight: bold;
+        font-style: normal;
+    }
+} 

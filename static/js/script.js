@@ -94,3 +94,36 @@ function updateTweetContainerWithNewAnalysis(newAnalysisResults) {
         tweetContainer.appendChild(tweetDiv);
     })
 }
+
+
+
+// Responsive Header
+function toggleNav() {
+    var navLinks = document.querySelector('.burger-nav-links');
+    navLinks.classList.toggle('show');
+    
+    var x = document.querySelector('.burger');
+    x.classList.toggle('change');
+}
+
+
+function closeBurgerNavIfExceedsWith() {
+    var navLinks = document.querySelector('.burger-nav-links');
+    var x = document.querySelector('.burger');
+
+    // Check the window size
+    if (window.innerWidth > 768) {
+        // Close navigation if it is open
+        if (navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+            x.classList.remove('change');
+        }
+    }
+}
+
+
+// Add event listeners
+window.addEventListener('resize', closeBurgerNavIfExceedsWith);
+
+// Call closeNavIfExceedsWidth on page load
+window.addEventListener('load', closeBurgerNavIfExceedsWith);

@@ -1,0 +1,105 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/term-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container-header">
+                <img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo">
+                <p class="title">TWEETPULSE</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                    
+                     <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="term-container">
+            <div class="term-description">
+                <h1>Frequently Asked Questions (FAQs)</h1>
+
+                <h3>Q1: How does the sentiment analysis on this website work?</h3>
+                <p>
+                    A1: The sentiment analysis is conducted using a pre-made model from the Hugging 
+                    Face's Transformers Python library, applied to a dataset of one million tweets. 
+                    The results provide an automated assessment of sentiment based on the analyzed data.
+                </p>
+
+                <h3>
+                    Q2: Do I need to create an account or log in with Twitter to use the sentiment 
+                    analysis feature?
+                </h3>
+                <p>
+                    A2: No, this website does not require users to create accounts or log in using 
+                    Twitter credentials. User interaction is limited to accessing and viewing the 
+                    sentiment analysis results.
+                </p>
+
+                <h3>Q3: Can I rely on the sentiment analysis results for critical decision-making?</h3>
+                <p>
+                    A3: The sentiment analysis results are for informational purposes only. While efforts 
+                    are made to provide accurate results, users should interpret them with caution and 
+                    consider the limitations of automated sentiment analysis. It is not advisable to rely 
+                    on these results for critical decision-making.
+                </p>
+
+                <h3>Q4: Is my privacy protected when using this website?</h3>
+                <p>
+                    A4: Yes, the website respects user privacy and does not collect personal information. 
+                    Data used for sentiment analysis is anonymized and not linked to individual users.
+                </p>
+
+                <h3>Q5: How often are the terms of service updated?</h3>
+                <p>
+                    A5: The terms of service may be updated or modified without prior notice. It is 
+                    advisable to review the terms periodically to stay informed about any changes.
+                </p>
+
+                <h3>Q6: Are there any warranties for the accuracy of the sentiment analysis results?</h3>
+                <p>
+                    A6: While efforts are made to provide accurate sentiment analysis, there are no 
+                    warranties, and the results may not be perfect or applicable to every context. 
+                    Users should use the information provided responsibly.
+                </p>
+
+                <h3>Q7: How can I contact the website operators for questions or concerns?</h3>
+                <p>
+                    A7: For any questions or concerns regarding the terms of service or the website, 
+                    please contact us at <a href="#">tweetpulse@gmail.com</a>.
+                </p>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}" class="active">FAQ</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
+            <a href="{{ url_for ('donate') }}">Donate</a>
+        </nav>
+    </footer>
+</html>

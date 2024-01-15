@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/home-styles.css') }}"> 
         <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -49,6 +51,7 @@
                         <i class="fab fa-twitter"></i> Start Analyzing Tweets
                     </a>
                 </div>
+                <div class="separator"></div>
             </div>
             <div class="container-image">
                 <div class="image-content">
@@ -57,4 +60,16 @@
             </div>
         </div>
     </body>
+
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
+            <a href="{{ url_for ('donate') }}">Donate</a>
+        </nav>
+    </footer>
 </html>

@@ -11,7 +11,6 @@ body {
     line-height: 1.5;
     color: #d7d8d9;
     background-color: #1d2a35;
-    padding-bottom: 6rem;
 }
 
 .container-title {
@@ -30,7 +29,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
 }
 
 .image-info {
@@ -74,7 +73,8 @@ body {
 }
 
 .nav-socmed li:hover {
-    box-shadow: 0 0 20px rgba(193, 177, 177, 0.4);
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
 /* icon colors */
@@ -89,6 +89,12 @@ body {
 .twitter-color {
     color: black;
 } 
+
+@media screen and (min-width: 1250px) {
+    .container-image {
+        height: 52.5%;
+    }
+}
 
 @media screen and (max-width: 1250px) {
     .container-title p {
@@ -110,3 +116,5 @@ body {
         margin-top: 4rem;
     }
 }
+
+

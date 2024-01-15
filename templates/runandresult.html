@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{url_for('static', filename='css/main-style.css')}}">
         <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
-        <script src="{{ url_for('static', filename="js/script.js")}}"></script>
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
         <title>TweetPulse.</title>
         
         <!--Google Fonts-->
@@ -23,19 +23,19 @@
                         <li><a href="{{ url_for('about') }}">About Us</a></li>
                         <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
                     </ul>
-                </nav>
 
-                <!-- SANDWICH NAVIGATION -->
-                <div class="burger" onclick="toggleNav()">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </div>
-                <ul class="burger-nav-links">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About Us</a></li>
-                    <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
-                </ul>
+                    <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <div class="home-title-container">
@@ -44,20 +44,23 @@
             </div>
         </div>
 
-        <div id="tweet-container" class="tweet-container">
-            {% for tweet_structure in tweet_structures %}
-                <div class="item item-1"> 
-                    <h3> {{ tweet_structure.username }}</h3>
-                    <p> {{ tweet_structure.tweet }}</p>
-                    <p> 
-                        Sentiment: 
-                        😀 {{ tweet_structure.analysis.get('Positive') }}%
-                        😐 {{ tweet_structure.analysis.get('Neutral') }}% 
-                        😠 {{ tweet_structure.analysis.get('Negative') }}% 
-                    </p>
-                </div>
-            {% endfor %}
+        <div class="background-tweet-container">
+            <div id="tweet-container" class="tweet-container">
+                {% for tweet_structure in tweet_structures %}
+                    <div class="item item-1"> 
+                        <h3> {{ tweet_structure.username }}</h3>
+                        <p> {{ tweet_structure.tweet }}</p>
+                        <p> 
+                            Sentiment: 
+                            😀 {{ tweet_structure.analysis.get('Positive') }}%
+                            😐 {{ tweet_structure.analysis.get('Neutral') }}% 
+                            😠 {{ tweet_structure.analysis.get('Negative') }}% 
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
+
 
         <div class="analysis-button">
             <a class="body-button" href="#" onclick="runNewAnalysis()"> Run New Analysis </a>
@@ -66,6 +69,7 @@
         <div id="loading-modal" class="modal">
             <div class="modal-content">
                 <p>Loading...</p>
+                <p>Please Wait</p>
             </div>
         </div>
     </body>

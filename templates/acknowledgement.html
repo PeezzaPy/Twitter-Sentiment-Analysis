@@ -4,6 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/ack-styles.css') }}"> 
         <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
     </head>
     <body>
         <header class="site-header">
@@ -16,8 +18,8 @@
                         <li><a href="{{ url_for('about') }}">About Us</a></li>
                         <li><a href="{{ url_for('acknowledgement') }}" class="active">Acknowledgement</a></li>
                     </ul>
-
-                    <!-- SANDWICH NAVIGATION -->
+                    
+                     <!-- SANDWICH NAVIGATION -->
                     <div class="burger" onclick="toggleNav()">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
@@ -63,5 +65,16 @@
                 </div>
             </section>
         </div>
+        <footer>
+            <div class="copyright-field">
+                <span>&copy; 2024 TweetPulse . </span>
+                <span>All Rights Reserved</span>
+            </div>
+            <nav class="support-nav">
+                <a href="{{ url_for('faq') }}">FAQ</a>
+                <a href="{{ url_for ('term') }}">Terms</a>
+                <a href="{{ url_for ('donate') }}">Donate</a>
+            </nav>
+        </footer>
     </body>
 </html>

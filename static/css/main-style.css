@@ -9,15 +9,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
-}
-
-.container-body {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: row;
-    padding: 0px 10% 0px 10%;
+    color: #d7d8d9;
+    background-color:#1d2a35;
 }
 
 .container-text {
@@ -26,97 +19,6 @@ body {
     
 }
 
-.body-content {
-    
-    height: 40%;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.body-content h1 {
-    font-style: normal;
-    font-weight: 700;
-    color: #2E363F;
-    margin-bottom: 3vh;
-    text-align: left;
-}
-
-.body-content p {
-    font-style: normal;
-    font-size: 18px;
-    font-weight: 400;
-    color: #707070;
-    text-align: justify;
-}
-
-.container-button {
-    width: 100%;
-    display: flex;
-    margin-top: 0;
-    padding-left: 10%;
-    justify-content: left;
-}
-
-.container-button a {
-    background-color: #1DA1F2;
-    color: #FFFFFF;
-    border-radius: 4px;
-    padding: 1.3rem 5rem;
-    font-style: normal;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.container-button a:hover {
-    background-color: #343A40;
-    cursor: pointer;
-}
-
-.primary-button i {
-    margin-right: 0.6rem;
-}
-
-.container-image {
-    width: 45%;
-}
-
-.image-content {
-    height: 100%;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.image-content img {
-    padding-top: 5vh;
-}
-
-/* END OF HOME PAGE CSS */
-
-.runandresulthomepage p, button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10%;
-}
-
-
-.runandresulthomepage button{
-    color: #1D9AF2;
-    background-color: #292D3E;
-    border: 1px solid #1D9AF2;
-    border-radius: 4px;
-    padding: 0 15px;
-    cursor: pointer;
-    height: 32px;
-    font-size: 14px;
-    transition: all 0.2s ease-in-out;
-}
-.runandresulthomepage button:hover {
-    transform: scale(1.1);
-}
-
-/* basta hiwalay to tangina AHAHAHHA*/
-
 :root {
     --clr-dark: #0f172a;
     --clr-light: #f1f5f9;
@@ -124,12 +26,20 @@ body {
 }
 
 
+.background-tweet-container {
+    background: #38444d;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 60%;
+    border-radius: 30px;
+}
+
 .tweet-container {
-  width: 60%;
-  height: 400px;
+  width: 100%;
+  height: 380px;
   margin: 0 auto;
   border-radius: 30px;
-  background-color: #40ABE8;
+  background-color: #15202b;
   padding: 30px;
   /* style */
   display: flex;
@@ -137,7 +47,6 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   overflow: auto;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -159,18 +68,16 @@ body {
     font-size: 15px;
 }
 
-.item h3{
+.item h3 {
     margin-left: 10px;
 }
 
 .analysis-button {
     width: 100%;
     display: flex;
-    margin-top: 0;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 1.5% 0;
 }
 
 .analysis-button a {
@@ -193,8 +100,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 20%;
-    padding-right: 20%;
     text-align: center;
 }
 
@@ -225,7 +130,6 @@ body {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-
 }
 
 

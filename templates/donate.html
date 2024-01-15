@@ -1,0 +1,57 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/donate-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container-header">
+                <img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo">
+                <p class="title">TWEETPULSE</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                    
+                     <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container-main-gcash">
+            <div class="container-gcash">
+                <img src="{{ url_for('static', filename='images/gcash-donate.jpg') }}" alt="gcash-donate-img"/>          
+            </div>
+            <div class="gcash-description">
+                <p>Thank you for the Donation and Support in our Service.<p>
+            </div> 
+        </div>
+    </body>
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
+            <a href="{{ url_for ('donate') }}" class="active">Donate</a>
+        </nav>
+    </footer>
+</html>
