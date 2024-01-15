@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     
     <title>TweetPulse.</title>
@@ -17,40 +17,48 @@
 
     <header class="site-header">
         <div class="container-header">
-            <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/header-logo.svg') }}" alt="header-logo"></a>
-            <p class="title"> TWEETPULSE.</p>
+            <a class="alis" href="{{url_for('index')}}"><p class="title"> TWEETPULSE.</p></a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="{{url_for('index')}}" class="active">Home</a></li>
-                    <li><a href="{{url_for('aboutus')}}">About Us</a></li>
-                    <li><a href="{{url_for('acknowledgement')}}">Acknowledgement</a></li>
+                    <li><a href="{{url_for('index')}}" class="active">home.</a></li>
+                    <li><a href="{{url_for('aboutus')}}">about us.</a></li>
+                    <li><a href="{{url_for('acknowledgement')}}">acknowledgement.</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container-body">
-        <div class="container-text">
-            <div class="body-content">
-                <h1> Unlocking Insights: Sentiment Analysis of Tweets </h1>
-                <p>
-                    Dive into the world of social media emotions with our advanced 
-                    sentiment analysis of tweets. In this cutting-edge exploration,
-                    we harness the power of natural language processing to dissect 
-                    the sentiments expressed in tweets, providing valuable insights 
-                    into public opinion, trends, and emotional patterns.
-                </p>
+    <div class="home-container">
+        <div class="home-wrapper1">
+            <div class="home-content1">
+                <p class="heading1"> TWITTER SENTIMENT ANALYSIS</p>
+                <p>Analyze real-time tweets to get user sentiments<br>
+                    results shown as Positive, Neutral, & Negative.</p>
             </div>
-            <div class="container-button">
-                <a class="primary-button" href="{{url_for('runandresult')}}"> Start Analyzing Tweets</a>
-            </div>
-        </div>
-        <div class="container-image">
-            <div class="image-content">
-                <img src="{{url_for('static', filename='images/twitter-sentiment-image.jpg')}}" alt="image">
+
+            <div class="home-content2">
+                <div class="content2-item1">
+                    <p class="heading2"> What is Sentiment Analysis?</p>
+                    <img class="tweet1" src="{{url_for('static', filename='images/sentiment.png')}}">
+                    <img class="tweet2" src="{{url_for('static', filename='images/tweet1.png')}}">
+                </div>
+                <div class="content2-item2">
+                    <p>Sentiment analysis, also known as opinion mining, is a natural language processing (NLP) technique that involves
+                        <br> determining and extracting the emotional tone or attitude expressed in a piece of text. The goal of sentiment analysis
+                        is to identify whether the sentiment conveyed in the text is positive, negative, or neutral. It is often used in various 
+                        applications, such as social media monitoring, customer feedback analysis, and market research, to understand and 
+                        gauge the sentiments and opinions of individuals or groups.
+                    </p>
+                    <img class="tweet3" src="{{url_for('static', filename='images/tweet3.png')}}">
+                    <img class="tweet4" src="{{url_for('static', filename='images/tweet4.png')}}"> 
+                    <p class="heading3"> TRY OUR TWITTER SENTIMENT ANALYSIS</p>
+                    <div class="tweet5">
+                        <img src="{{url_for('static', filename='images/twitterblue.svg')}}">
+                        <button class="runbutton"> Start Analysis </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>

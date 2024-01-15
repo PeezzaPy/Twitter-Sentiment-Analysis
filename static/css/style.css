@@ -2,25 +2,33 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
 }
 
+
 body {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
+    color: white;
+    background-color: #1F1F1F;
 }
 
+/*start*/
+
 header.site-header {
-    background: #40ABE8;
-    height: 10vh;
+    background: #D9D9D9;
+    height: 60px;
 }
 
 .title {
     margin-right: auto;
+    text-decoration: none;
+    font-weight: bold;
 }
-
+.alis{
+    text-decoration: none;
+}
 .container-header {
     width: 90%;
     height: 100%;
@@ -31,15 +39,15 @@ header.site-header {
     align-items: center;
 }
 
-.container-header img {
+.container-header a img {
     height: 40px;
     width: 60px;
 }
 
 .container-header p {
     padding-left: 15px;
-    color: white;
-    font-size: 24px;
+    color: #1F1F1F;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -59,7 +67,7 @@ header.site-header {
 }
 
 .nav-links a {
-    color: white;
+    color: #1F1F1F;
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
@@ -70,6 +78,8 @@ header.site-header {
     text-decoration: underline;
 }
 
+/* end */
+/*
 .container-body {
     width: 100%;
     height: 90vh;
@@ -147,6 +157,118 @@ header.site-header {
 .image-content img {
     padding-top: 5vh;
 }
+*/
+.home-container{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #1F1F1F;
+}
+
+.home-wrapper1{
+    width: 100%;
+    height: 115vh;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.home-content1{
+    width: 100%;
+    height: 15vh;
+    margin-top: 50px;
+}
+
+.home-content1 p{
+    display: flex;
+    justify-content: center;
+}
+
+.home-content2{
+    width: 100%;
+    height: 82vh;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.heading1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.heading2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tweet1{
+    height: 150px;
+    width: 426px;
+}
+
+.tweet2{
+    padding-top: 10px;
+}
+
+.content2-item1{
+    width: 40%;
+}
+.content2-item2{
+    width: 60%;
+    color: white;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.tweet3{
+    padding-top: 58px;
+    width: 625px;
+    height: 200px;
+}
+
+.tweet4{
+    width: 625px;
+}
+
+.heading3{
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tweet5{
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.tweet5 img{
+    height: 90px;
+    width: 90px;
+}
+
+.runbutton {
+    color: white;
+    background-color: #1d9bf0;
+    border-radius: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:50px;
+    width: 200px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+
+.runbutton:hover{
+    transform: scale(1.1);
+}
+
 
 /* END OF HOME PAGE CSS */
 
