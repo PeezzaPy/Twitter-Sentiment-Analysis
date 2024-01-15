@@ -14,10 +14,8 @@ body {
 }
 
 .container-body {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -26,13 +24,13 @@ body {
     font-style: normal;
     font-size: 28px;
     font-weight: bold;
-    padding-top: 5rem;
-    padding-bottom: 4rem;
+    padding: 3rem 14vw;
 }
 
 .container-description {
     width: 100%;
     display: flex;
+    padding: 0 15vw;
 }
 
 .container-description img {
@@ -50,6 +48,11 @@ body {
     padding: 3rem 2rem 1rem 2rem;
 }
 
+.content {
+    padding-left: 3vw;
+    width: 100%;
+}
+
 .content p {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -63,6 +66,30 @@ body {
 
 .content li {
     padding-left: 0.5rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .container-description {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    #description {
+        text-align: center;
+    }
+    .content, .content p {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-body p {
+        text-align: center;
+    }
+    .container-description {
+        padding: 0 5vw;
+    }
 }
 
 

@@ -10,24 +10,37 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
+    height: 100%;
 }
 
 .container-body {
+    height: 100%;
     width: 100%;
-    height: 80vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  
 }
 
 .container-text {
-    padding: 4rem 6rem;
+    padding: 3rem 10vw 3rem 10vw;
     width: 55%;
+    background-color: white;
 }
 
-.body-content {
-    height: 60%;
-    width: 80%;
-    margin: 0 auto;
+.container-image {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 2.2rem;
+    padding-right: 1.5rem;
+    width: 45%;
+    background-color: white;
+}
+
+.container-image img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .body-content h1 {
@@ -50,8 +63,6 @@ body {
     width: 100%;
     display: flex;
     margin-top: 3rem;
-    padding-left: 4rem;
-    justify-content: left;
 }
 
 .container-button a {
@@ -64,29 +75,55 @@ body {
     text-decoration: none;
 }
 
-.container-button a:hover {
-    background-color: #343A40;
-    cursor: pointer;
+.separator {
+    display: none;
+    width: 100%;
+    background-color: #cbcecf;
+    height: 2px;
+    box-shadow: 20 10 10px rgba(0, 0, 0, 0.5);
+    margin: 2rem auto 0 auto;
 }
 
-.primary-button i {
-    margin-right: 0.6rem;
+.container-steps {
+    background-color: #F4F5F6;
+    width: 100%;
+    height: 400px;
 }
 
-.container-image {
-    width: 45%;
-}
+@media screen and (max-width: 900px) {
+    .container-body {
+        display: flex;
+        flex-direction: column;
+    }
 
-.image-content {
-    height: 100%;
-    width: 90%;
-    margin: 0 auto;
-}
+    .container-text {
+        width: 100%;
+        padding: 3rem 7vw;
+        font-size: 14px;
+    }
 
-.image-content img {
-    padding-top: 5vh;
-}
+    .body-content h1, .body-content p {
+        text-align: center;
+    }
 
+    .container-image {
+        justify-content: center;
+        width: 100%;
+        margin-top: -2rem;
+    }
+
+
+    .container-button {
+        justify-content: center;
+        padding: 1.3rem 1vw;
+        margin-top: 1.5rem;
+        font-size: 14px;
+    }
+    
+    .separator {
+        display: block;
+    }
+}
 
 
 

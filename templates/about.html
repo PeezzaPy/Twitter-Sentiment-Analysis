@@ -17,6 +17,18 @@
                         <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
                         <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
                     </ul>
+
+                    <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
