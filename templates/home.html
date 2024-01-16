@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,35 +28,20 @@
         </div>
     </header>
 
-    <div class="home-container">
-        <div class="home-wrapper1">
-            <div class="home-content1">
-                <p class="heading1"> TWITTER SENTIMENT ANALYSIS</p>
-                <p>Analyze real-time tweets to get user sentiments<br>
-                    results shown as Positive, Neutral, & Negative.</p>
+    <div class="container">
+        <div class="wrapper1">
+            <h1> Twitter Sentiment Analysis </h1>
+            <p> Analyze real-time tweets to get user sentiments.<br>
+                results shown as Positive, Neutral, and Negative.
+            </p>
+        </div>
+        <div class="wrapper2">
+            <div class="wrapper2-item1">
+                <h3> What is Sentiment Analysis?</h3>
+                <img src="{{url_for('static', filename='images/sentimentanalysis.jpg')}}" alt="image">
             </div>
-
-            <div class="home-content2">
-                <div class="content2-item1">
-                    <p class="heading2"> What is Sentiment Analysis?</p>
-                    <img class="tweet1" src="{{url_for('static', filename='images/sentiment.png')}}">
-                    <img class="tweet2" src="{{url_for('static', filename='images/tweet1.png')}}">
-                </div>
-                <div class="content2-item2">
-                    <p>Sentiment analysis, also known as opinion mining, is a natural language processing (NLP) technique that involves
-                        <br> determining and extracting the emotional tone or attitude expressed in a piece of text. The goal of sentiment analysis
-                        is to identify whether the sentiment conveyed in the text is positive, negative, or neutral. It is often used in various 
-                        applications, such as social media monitoring, customer feedback analysis, and market research, to understand and 
-                        gauge the sentiments and opinions of individuals or groups.
-                    </p>
-                    <img class="tweet3" src="{{url_for('static', filename='images/tweet3.png')}}">
-                    <img class="tweet4" src="{{url_for('static', filename='images/tweet4.png')}}"> 
-                    <p class="heading3"> TRY OUR TWITTER SENTIMENT ANALYSIS</p>
-                    <div class="tweet5">
-                        <img src="{{url_for('static', filename='images/twitterblue.svg')}}">
-                        <button class="runbutton"> Start Analysis </button>
-                    </div>
-                </div>
+            <div class="wrapper2-item2">
+                <p>Sentiment analysis, also known as opinion mining, is a natural language processing (NLP) technique that involves determining and extracting the emotional tone or attitude expressed in a piece of text. The goal of sentiment analysis is to identify whether the sentiment conveyed in the text is positive, negative, or neutral. It is often used in various applications, such as social media monitoring, customer feedback analysis, and market research, to understand and gauge the sentiments and opinions of individuals or groups.</p>
             </div>
         </div>
     </div>
