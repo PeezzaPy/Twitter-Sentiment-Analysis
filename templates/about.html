@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container-header">
+                <img src={{ url_for('static', filename='images/header-logo.jpg') }} alt="header-logo">
+                <p class="title">TWEETPULSE</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+
+                    <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container-title">
+            <p>ABOUT US</p>
+        </div>
+        <div class="container-image">
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/marasigan-pic.jpg') }}" alt="marasigan-img"/>
+                <p>Patrick Marasigan</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/johnpatrick.marasigan.125" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://github.com/PeezzaPy" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/marasimangot" target="_blank"><i class="fab fa-twitter" style="color: black;"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/gabaon-pic.jpg') }}" alt="gabaon-img"/>
+                <p>Deniece Gabaon</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100008997394826" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://github.com/DenciaGabaon" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/Denisyasyasya" target="_blank"><i class="fab fa-twitter" style="color: black;"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">
+                <img src="{{ url_for('static', filename='images/agullo-pic.jpg') }}" alt="agullo-img"/>
+                <p>Jhan Kyle Agullo</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/JkyleAgullo" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://github.com/JkyleAgullo" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/xkviax" target="_blank"><i class="fab fa-twitter" style="color: black;"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-info">    
+                <img src="{{ url_for('static', filename='images/navale-pic.jpg') }}" alt="navale-img"/>
+                <p>Matthew Navale</p>
+                <nav class="nav-socmed">
+                    <ul>
+                        <li><a href="https://www.facebook.com/matthewanavale" target="_blank"><i class="fab fa-facebook fb-color"></i></a></li>
+                        <li><a href="https://github.com/matthewanavale" target="_blank"><i class="fab fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/xmth__" target="_blank"><i class="fab fa-twitter" style="color: black;"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </body>
+    
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
+            <a href="{{ url_for ('donate') }}">Donate</a>
+        </nav>
+    </footer>
+</html>

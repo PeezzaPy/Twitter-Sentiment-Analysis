@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #d7d8d9;
+    background-color:#1d2a35;
+}
+
+.container-body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;  
+}
+
+.container-text {
+    padding: 3rem 10vw;
+    width: 55%;
+    background-color:#1d2a35;
+}
+
+.container-image {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding-top: 2.2rem;
+    padding-right: 1.5rem;
+    width: 45%;
+    background-color:#1d2a35;
+}
+
+.container-image img {
+    display: block;
+    margin: auto;
+    width: 470px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.body-content h1 {
+    font-style: normal;
+    font-weight: 700;
+    color: #d7d8d9;
+    margin-bottom: 3vh;
+    text-align: left;
+}
+
+.body-content p {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: #b4b4b4;
+    text-align: justify;
+}
+
+.container-button {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.container-button a {
+    background-color: #1DA1F2;
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 1.3rem 5rem;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.container-button a:hover {
+    background-color: #657786;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.container-features {
+    width: 100%;
+    background-color:#233340;
+    padding: 3rem 5vw;
+}
+
+.container-features p {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    color: #1da1f2;
+    font-weight: 700;
+}
+
+.container-features h3 {
+    font-size: 1.6rem;
+    padding-bottom: 3rem;
+}
+
+.get-started p, .get-started h3 {
+    text-align: center;
+}
+
+.column-features {
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+}
+
+.col1 {
+    width: 40%;
+}
+
+.col1 img {
+    width: 600px;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 3rem;
+}
+
+.features {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.sa-logo {
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+.sa-info {
+    display: flex;
+    flex-direction: column; 
+}
+
+.sa-info h3 {
+    padding: 0;
+    font-size: 1.3rem;
+}
+
+.sa-info p {
+    color:#8891ad;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.separator {
+    display: none;
+    width: 100%;
+    background-color: #cbcecf;
+    height: 2px;
+    box-shadow: 20 10 10px rgba(0, 0, 0, 0.5);
+    margin: 2rem auto 0 auto;
+}
+
+.container-steps {
+    background-color: #F4F5F6;
+    width: 100%;
+    height: 400px;
+}
+
+
+@media screen and (max-width: 1240px) {
+    .column-features {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .col1, .col2 {
+        width: 100%;
+    }
+
+    .col1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .col2 {
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .features {
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container-text {
+        padding: 3rem 5vw;
+        width: 50%;
+    }
+    .container-image {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-text {
+        width: 100%;
+        padding: 3rem 7vw;
+        font-size: 14px;
+    }
+
+    .body-content h1, .body-content p {
+        text-align: center;
+    }
+
+    .container-image {
+        justify-content: center;
+        width: 100%;
+        margin-top: -2rem;
+    }
+    
+    .col1 img {
+        width: 90vw;
+    }
+
+    .features {
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .container-button {
+        justify-content: center;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .container-button a {
+        padding: 1.3rem 10vw;
+    }
+    
+    .separator {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    .col1 img {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .sa-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .sa-info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container-image img {
+        width: 80vw;
+    }
+}
+
+

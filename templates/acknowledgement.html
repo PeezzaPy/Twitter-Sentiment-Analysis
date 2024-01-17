@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/ack-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container-header">
+                <img src={{ url_for('static', filename='images/header-logo.jpg') }} alt="header-logo">
+                <p class="title">TWEETPULSE</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}" class="active">Acknowledgement</a></li>
+                    </ul>
+                    
+                     <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}" class="active">Acknowledgement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container-body">
+            <p class="title-body">ACKNOWLEDGEMENT</p>
+            <section class="container-description">
+                <img src="{{ url_for('static', filename="images/anthology.jpg") }}"/>
+                <div class="content">
+                    <h1 id="description">ACL ANTHOLOGY</h1>
+                    <p> 
+                        We would like to thank ACL ANTHOLOGY for providing the study, 
+                        TweetEval: Unified Benchmark and Comparative Evaluation for Tweet 
+                        Classification in which we have used the study’s model uploaded on 
+                        HUGGING FACE. The website provided transformers library and we use 
+                        it as an API to process tweets for sentiment analysis.
+                    </p>
+
+                    <h1 id="citation">CITATION</h1>
+                    <ul>
+                        <li>
+                            Francesco Barbieri, Jose Camacho-Collados, Luis Espinosa Anke, and 
+                            Leonardo Neves. 2020. TweetEval: Unified Benchmark and Comparative 
+                            Evaluation for Tweet Classification. In Findings of the Association 
+                            for Computational Linguistics: EMNLP 2020, pages 1644–1650, Online. 
+                            Association for Computational Linguistics.
+                        </li>
+                        <li>
+                            [TweetEval: Unified Benchmark and Comparative Evaluation for Tweet Classification]
+                            (https://aclanthology.org/2020.findings-emnlp.148) (Barbieri et al., Findings 2020)
+                        </li>
+                    </ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="copyright-field">
+                <span>&copy; 2024 TweetPulse . </span>
+                <span>All Rights Reserved</span>
+            </div>
+            <nav class="support-nav">
+                <a href="{{ url_for('faq') }}">FAQ</a>
+                <a href="{{ url_for ('term') }}">Terms</a>
+                <a href="{{ url_for ('donate') }}">Donate</a>
+            </nav>
+        </footer>
+    </body>
+</html>

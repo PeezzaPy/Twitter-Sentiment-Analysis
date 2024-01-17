@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #d7d8d9;
+    background-color: #1d2a35;
+}
+
+.container-body {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.title-body {
+    font-style: normal;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 3rem 14vw;
+}
+
+.container-description {
+    width: 100%;
+    display: flex;
+    padding: 0 15vw;
+}
+
+.container-description img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+#description {
+    padding: 1rem 2rem;
+}
+
+#citation {
+    padding: 3rem 2rem 1rem 2rem;
+}
+
+.content {
+    padding-left: 3vw;
+    width: 100%;
+}
+
+.content p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.content ul {
+    padding-right: 2rem;
+    padding-left: 4rem;
+    text-align: justify;
+}
+
+.content li {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .container-description {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .title-body {
+        padding: 3rem 0;
+        font-size: 1.5rem;
+    }
+
+    #description {
+        text-align: center;
+    }
+    
+    .content h1 {
+        font-size: 1.35rem;
+    }
+
+    .content {
+        margin-right: 16px;
+    }
+    .content, .content p {
+        padding: 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .copyright-field, .support-nav {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .copyright-field {
+        padding: 0.8rem 3vw;
+    }
+
+    .support-nav {
+        padding-top: 0;
+        padding-bottom: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container-body {
+        width: 100%;
+    }
+
+    .container-body p {
+        text-align: center;
+    }
+
+    .container-description {
+        padding: 0 5vw;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+header.site-header {
+    /* background: #40ABE8; */
+    background: #d9d9d9;
+    height: 70px;
+}
+
+.title {
+    margin-right: auto;
+}
+
+.container-header {
+    width: 90%;
+    height: 100%;
+    padding-right: 1rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header img {
+    height: 40px;
+    width: 40px;
+}
+
+.container-header p {
+    padding-left: 15px;
+    color: #2e363f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container-header nav {
+    float: right;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-links a, .burger-nav-links a {
+    color: #2e363f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-links a:hover, 
+.nav-links a.active,
+.burger-nav-links a:hover, 
+.burger-nav-links a.active {
+    text-decoration: underline;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #2e363f;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.burger-nav-links {
+    position: absolute;
+    top: 80px;
+    right: 7%;
+    padding: 2vw 3vw;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.burger-nav-links li {
+    margin: 15px 0;
+}
+
+/* IF SANDWICH IS CLICKED */
+.burger-nav-links.show {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.burger-nav-links.show a {
+    color: black;
+}
+
+.burger-nav-links.show li {
+    margin: 15px 0;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links li {
+        /* reset */
+        margin: 0;       
+    }
+    .burger {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .burger-nav-links.show {
+        display: none;
+    }
+}

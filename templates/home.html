@@ -1,0 +1,115 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home-styles.css') }}"> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+        <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container-header">
+                <img src={{ url_for('static', filename='images/header-logo.jpg') }} alt="header-logo">
+                <p class="title">TWEETPULSE</p>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+
+                    <!-- SANDWICH NAVIGATION -->
+                    <div class="burger" onclick="toggleNav()">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul class="burger-nav-links">
+                        <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('acknowledgement') }}">Acknowledgement</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container-body">
+            <div class="container-text">
+                <div class="body-content">
+                    <h1>Unlocking Insights: Sentiment Analysis of Tweets</h1>
+                    <p>
+                        Dive into the world of social media emotions with our advanced 
+                        sentiment analysis of tweets. In this cutting-edge exploration,
+                        we harness the power of natural language processing to dissect 
+                        the sentiments expressed in tweets, providing valuable insights 
+                        into public opinion, trends, and emotional patterns.
+                    </p>
+                </div>
+                <div class="container-button">
+                    <a class="primary-button" href="{{ url_for('runandresult') }}">
+                        <i class="fab fa-twitter"></i> Start Analyzing Tweets
+                    </a>
+                </div>
+                <div class="separator"></div>
+            </div>
+            <div class="container-image">
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='images/twitter-sentiment-image.png') }}" alt="twitter-sentiment-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-features">
+            <div class="get-started">
+                <p>Get Started</p>
+                <h3>Explore Sentiment Analysis</h3>
+            </div>
+            <div class="column-features">
+                <div class="col1">
+                    <img src="{{ url_for('static', filename="images/sample-sentiment.jpg")}}">
+                </div>
+                <div class="col2">
+                    <div class="features">
+                        <div class="sa-logo">
+                            <img src="{{ url_for('static', filename="images/enter-icon.png")}}">
+                        </div>
+                        <div class="sa-info">
+                            <h3>Access Without Account Creation</h3>
+                            <p>
+                                No need to go through the hassle of creating an account; 
+                                our website allows you to run tweet analyses hassle-free.
+                            </p>
+                        </div>  
+                    </div>   
+                    <div class="features">
+                        <div class="sa-logo">
+                            <img src="{{ url_for('static', filename="images/tweet-analysis-icon.png")}}">
+                        </div>
+                        <div class="sa-info">
+                            <h3>Access Without Account Creation</h3>
+                            <p>
+                                Search through public tweets effortlessly.
+                                We keep it straightforward for your convenience.
+                            </p>
+                        </div>  
+                    </div>               
+                </div>
+
+                
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
+            <a href="{{ url_for ('donate') }}">Donate</a>
+        </nav>
+    </footer>
+</html>
