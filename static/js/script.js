@@ -1,6 +1,6 @@
 function runNewAnalysis() {
     // Show modal
-    document.getElementById('loading-modal').style.display = "block";
+    document.getElementById('loading-modal').style.display = "flex";
 
     // Simulate async operation
     setTimeout(function() {

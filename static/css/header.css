@@ -75,7 +75,7 @@ header.site-header {
 
 .burger-nav-links {
     position: absolute;
-    top: 10%;
+    top: 80px;
     right: 7%;
     padding: 2vw 3vw;
     list-style: none;

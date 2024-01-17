@@ -2,8 +2,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/main-style.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/runandresult-styles.css')}}">
         <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/footer.css')}}">
         <script src="{{ url_for('static', filename="js/script.js")}}" defer></script>
         <title>TweetPulse.</title>
         
@@ -50,11 +51,20 @@
                     <div class="item item-1"> 
                         <h3> {{ tweet_structure.username }}</h3>
                         <p> {{ tweet_structure.tweet }}</p>
-                        <p> 
-                            Sentiment: 
-                            😀 {{ tweet_structure.analysis.get('Positive') }}%
-                            😐 {{ tweet_structure.analysis.get('Neutral') }}% 
-                            😠 {{ tweet_structure.analysis.get('Negative') }}% 
+                        <p class="sentiment">
+                            <span> Sentiment: </span>
+                            <span>
+                                <img src={{ url_for('static', filename="images/positive.svg")}}>
+                                {{ tweet_structure.analysis.get('Positive') }} %
+                            </span>
+                            <span>
+                                <img src={{ url_for('static', filename="images/neutral.svg")}}>
+                                {{ tweet_structure.analysis.get('Neutral') }} %
+                            </span>
+                            <span>
+                                <img src={{ url_for('static', filename="images/negative.svg")}}>
+                                {{ tweet_structure.analysis.get('Negative') }} %
+                            </span>
                         </p>
                     </div>
                 {% endfor %}
@@ -73,4 +83,16 @@
             </div>
         </div>
     </body>
+
+    <footer>
+        <div class="copyright-field">
+            <span>&copy; 2024 TweetPulse . </span>
+            <span>All Rights Reserved</span>
+        </div>
+        <nav class="support-nav">
+            <a href="{{ url_for('faq') }}">FAQ</a>
+            <a href="{{ url_for ('term') }}" class="active">Terms</a>
+            <a href="{{ url_for ('donate') }}">Donate</a>
+        </nav>
+    </footer>
 </html>
