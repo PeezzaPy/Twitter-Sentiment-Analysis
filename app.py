@@ -21,7 +21,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    load_model()        # load model at web page opening
     return render_template('home.html')
 
 
@@ -37,6 +36,7 @@ def acknowledgement():
 
 @app.route('/main')
 def runandresult():
+    load_model()
     tweet_structures = analyze()
     return render_template('runandresult.html', tweet_structures=tweet_structures)
 
@@ -58,6 +58,20 @@ def get_new_analysis():
         for tweet in tweet_structures
     ]
     return jsonify(json_results)
+
+
+# Supporting Info in Webpage
+@app.route('/terms-of-service')
+def term():
+    return render_template('term.html')
+
+@app.route('/donate-gcash')
+def donate():
+    return render_template('donate.html')
+
+@app.route('/faq')
+def faq():
+    return render_template('faq.html')
 
 # @app.route('/login')
 # def login():

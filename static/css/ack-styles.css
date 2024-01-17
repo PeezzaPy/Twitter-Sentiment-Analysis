@@ -77,10 +77,22 @@ body {
         padding: 0;
     }
 
+    .title-body {
+        padding: 3rem 0;
+        font-size: 1.5rem;
+    }
+
     #description {
         text-align: center;
     }
     
+    .content h1 {
+        font-size: 1.35rem;
+    }
+
+    .content {
+        margin-right: 16px;
+    }
     .content, .content p {
         padding: 0;
     }
@@ -106,6 +118,10 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+    .container-body {
+        width: 100%;
+    }
+
     .container-body p {
         text-align: center;
     }

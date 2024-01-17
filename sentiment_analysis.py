@@ -23,7 +23,7 @@ def load_model():
 
 def load_csv(file):
     dataFrame = pd.read_csv(file, nrows=200000)
-    random_row = dataFrame.sample(n=15)              # change depends on how many do you want to retrieve
+    random_row = dataFrame.sample(n=9)              # change depends on how many do you want to retrieve
 
     dataset = [(row[1], row[4], row[5]) for row in random_row.itertuples(index=False)]
 

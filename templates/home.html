@@ -11,7 +11,7 @@
     <body>
         <header class="site-header">
             <div class="container-header">
-                <img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo">
+                <img src={{ url_for('static', filename='images/header-logo.jpg') }} alt="header-logo">
                 <p class="title">TWEETPULSE</p>
                 <nav>
                     <ul class="nav-links">
@@ -55,8 +55,48 @@
             </div>
             <div class="container-image">
                 <div class="image-content">
-                    <img src="{{ url_for('static', filename='images/twitter-sentiment-image.jpg') }}" alt="twitter-sentiment-image">
+                    <img src="{{ url_for('static', filename='images/twitter-sentiment-image.png') }}" alt="twitter-sentiment-image">
                 </div>
+            </div>
+        </div>
+
+        <div class="container-features">
+            <div class="get-started">
+                <p>Get Started</p>
+                <h3>Explore Sentiment Analysis</h3>
+            </div>
+            <div class="column-features">
+                <div class="col1">
+                    <img src="{{ url_for('static', filename="images/sample-sentiment.jpg")}}">
+                </div>
+                <div class="col2">
+                    <div class="features">
+                        <div class="sa-logo">
+                            <img src="{{ url_for('static', filename="images/enter-icon.png")}}">
+                        </div>
+                        <div class="sa-info">
+                            <h3>Access Without Account Creation</h3>
+                            <p>
+                                No need to go through the hassle of creating an account; 
+                                our website allows you to run tweet analyses hassle-free.
+                            </p>
+                        </div>  
+                    </div>   
+                    <div class="features">
+                        <div class="sa-logo">
+                            <img src="{{ url_for('static', filename="images/tweet-analysis-icon.png")}}">
+                        </div>
+                        <div class="sa-info">
+                            <h3>Access Without Account Creation</h3>
+                            <p>
+                                Search through public tweets effortlessly.
+                                We keep it straightforward for your convenience.
+                            </p>
+                        </div>  
+                    </div>               
+                </div>
+
+                
             </div>
         </div>
     </body>

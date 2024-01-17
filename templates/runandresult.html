@@ -16,7 +16,7 @@
     <body>
         <header class="site-header">
             <div class="container-header">
-                <img src={{ url_for('static', filename='images/header-logo.svg') }} alt="header-logo">
+                <img src={{ url_for('static', filename='images/header-logo.jpg') }} alt="header-logo">
                 <p class="title">TWEETPULSE</p>
                 <nav>
                     <ul class="nav-links">
@@ -77,10 +77,7 @@
         </div>
 
         <div id="loading-modal" class="modal">
-            <div class="modal-content">
-                <p>Loading...</p>
-                <p>Please Wait</p>
-            </div>
+            <span class="loading-spinner"></span>
         </div>
     </body>
 
@@ -91,7 +88,7 @@
         </div>
         <nav class="support-nav">
             <a href="{{ url_for('faq') }}">FAQ</a>
-            <a href="{{ url_for ('term') }}" class="active">Terms</a>
+            <a href="{{ url_for ('term') }}">Terms</a>
             <a href="{{ url_for ('donate') }}">Donate</a>
         </nav>
     </footer>
