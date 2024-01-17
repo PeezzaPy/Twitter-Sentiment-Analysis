@@ -11,6 +11,9 @@ body {
     line-height: 1.5;
     color: #d7d8d9;
     background-color: #1d2a35;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container-title {

@@ -11,6 +11,9 @@ body {
     line-height: 1.5;
     color: #d7d8d9;
     background-color: #1d2a35; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container-main-gcash {
@@ -64,13 +67,21 @@ body {
         margin: 0;
     }
 
+
     .gcash-description {
-        width: 100%;
+        display: none;
     }
 
-    .gcash-description p {
+    /* .gcash-description p {
         font-size: 22px;
         font-weight: bold;
         font-style: normal;
+    } */
+}
+
+@media screen and (max-width: 550px) {
+    .container-gcash img {
+        width: 80vw;
+        padding: 1rem;
     }
-} 
+}

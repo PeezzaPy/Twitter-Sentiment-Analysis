@@ -8,6 +8,7 @@ footer {
     font-weight: bold;
     line-height: 1.5;
     color: #1d2a35;
+    margin-top: auto;
 }
 
 .copyright-field, .support-nav {
@@ -53,5 +54,11 @@ footer {
     .support-nav {
         padding-top: 0;
         padding-bottom: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .copyright-field, .support-nav {
+        font-size: 0.7rem;
     }
 }
