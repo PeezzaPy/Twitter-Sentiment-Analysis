@@ -3,6 +3,7 @@
 *Instruction*
 
 *Choose preferred instruction:*
+
 **A. Download the extracted files**
    1. Download and extract (Twitter-Sentiment-Analysis.rar) file.
 
