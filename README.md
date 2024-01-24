@@ -1,7 +1,7 @@
 **SENTIMENT ANALYSIS ON TWITTER**
 
 *Instruction*
-1. Create a folder and inside the folder use and cmd to clone this repository to your folder.
+1. Create a folder and inside the folder right click and use _Git Bash_ to clone this repository to your folder.
 *git clone https://github.com/PeezzaPy/Twitter-Sentiment-Analysis.git*
 2. Extract (dataset.rar) file to get the dataset excel file named "training.1600000.processed.noemoticon".
 3. Enter inside Twitter-Sentiment-Analysis folder and create folder named "dataset".
