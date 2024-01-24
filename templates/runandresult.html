@@ -49,10 +49,9 @@
             <div id="tweet-container" class="tweet-container">
                 {% for tweet_structure in tweet_structures %}
                     <div class="item item-1"> 
-                        <h3> {{ tweet_structure.username }}</h3>
+                        <h3> @{{ tweet_structure.username }}</h3>
                         <p> {{ tweet_structure.tweet }}</p>
                         <p class="sentiment">
-                            <span> Sentiment: </span>
                             <span>
                                 <img src={{ url_for('static', filename="images/positive.svg")}}>
                                 {{ tweet_structure.analysis.get('Positive') }} %

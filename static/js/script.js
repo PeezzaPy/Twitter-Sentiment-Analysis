@@ -10,7 +10,7 @@ function runNewAnalysis() {
         // Hide loading modal when the new analysis is complete
         setTimeout(function() {
             document.getElementById('loading-modal').style.display = "none";
-        }, 1500);
+        }, 2000);
     }, 1000);       // 2000 millisecond = 2 sec
 }
 
@@ -60,6 +60,13 @@ window.addEventListener('resize', closeBurgerNavIfExceedsWith);
 window.addEventListener('load', closeBurgerNavIfExceedsWith);
 
 
+function createEmojiSVG(filename) {
+    const svg = document.createElement('img');
+    svg.src = `static/images/${filename}`;
+    return svg;
+}
+
+
 function updateTweetContainerWithNewAnalysis(newAnalysisResults) {
     // Clear existing content and reset to top
     document.getElementById('tweet-container').innerHTML = '';
@@ -68,22 +75,57 @@ function updateTweetContainerWithNewAnalysis(newAnalysisResults) {
     // Loop through new analysis results and update tweet-container
     newAnalysisResults.forEach(tweet_structure => {
         const tweetContainer = document.getElementById('tweet-container');
+        tweetContainer.className = "tweet-container";
 
         // Creat new tweet structure elements
         const tweetDiv = document.createElement('div');
         tweetDiv.className = "item item-1";
 
         const username = document.createElement('h3');
-        username.textContent = tweet_structure.username;
+        username.textContent = `@${tweet_structure.username}`;
 
         const tweet = document.createElement('p');
         tweet.textContent = tweet_structure.tweet;
 
+        // Create SVG elements for emojis from file directory
+        const positiveEmoji = createEmojiSVG('positive.svg');
+        const neutralEmoji = createEmojiSVG('neutral.svg');
+        const negativeEmoji = createEmojiSVG('negative.svg');
+
+        // Create the overall sentimentAnalysis container
         const sentimentAnalysis = document.createElement('p');
-        sentimentAnalysis.innerHTML = `Sentiment: 
-                😀 ${tweet_structure.analysis.Positive}%
-                😐 ${tweet_structure.analysis.Neutral}% 
-                😠 ${tweet_structure.analysis.Negative}%`;
+        sentimentAnalysis.className = "sentiment";
+
+        // Create elements for positive sentiment
+        const positiveSpan = document.createElement('span');
+        const positiveImage = createEmojiSVG('positive.svg');
+        positiveSpan.appendChild(positiveImage);
+        const positiveText = document.createTextNode(` ${tweet_structure.analysis.Positive}%`);
+        positiveSpan.appendChild(positiveText);
+
+        // Append positive elements to sentimentAnalysis container
+        sentimentAnalysis.appendChild(positiveSpan);
+
+        // Create elements for neutral sentiment
+        const neutralSpan = document.createElement('span');
+        const neutralImage = createEmojiSVG('neutral.svg');
+        neutralSpan.appendChild(neutralImage);
+        const neutralText = document.createTextNode(` ${tweet_structure.analysis.Neutral}%`);
+        neutralSpan.appendChild(neutralText);
+
+        // Append neutral elements to sentimentAnalysis container
+        sentimentAnalysis.appendChild(neutralSpan);
+
+        // Create elements for negative sentiment
+        const negativeSpan = document.createElement('span');
+        const negativeImage = createEmojiSVG('negative.svg');
+        negativeSpan.appendChild(negativeImage);
+        const negativeText = document.createTextNode(` ${tweet_structure.analysis.Negative}%`);
+        negativeSpan.appendChild(negativeText);
+
+        // Append negative elements to sentimentAnalysis container
+        sentimentAnalysis.appendChild(negativeSpan);
+
         
         // Append elements to tweetDiv
         tweetDiv.appendChild(username);
