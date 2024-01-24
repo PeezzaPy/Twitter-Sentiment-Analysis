@@ -9,6 +9,6 @@
 ![image](https://github.com/PeezzaPy/Twitter-Sentiment-Analysis/assets/66209956/44ad6197-edfd-4ab8-b54e-b3bcbc3c7c34)
 
 5. Install packages (type on Terminal):
-pip install Flask transformers scipy.
+   *pip install Flask transformers scipy*
 6. Then, run "app.py" on "Twitter-Sentiment-Analysis" folder on any IDE (preferred VSCODE).
 7. On Terminal, during runtime, it will provide localhost (e.g. http://127.0.0.5000). Copy and paste that url to Google Chrome.
