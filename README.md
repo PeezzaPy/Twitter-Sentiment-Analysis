@@ -1,7 +1,5 @@
 **SENTIMENT ANALYSIS ON TWITTER**
 
-*Instruction*
-
 *Choose preferred instruction:*
 
 **A. Download the extracted files**
