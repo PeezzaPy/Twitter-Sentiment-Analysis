@@ -2,7 +2,6 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from TwitterUser import TwitterUser
 from scipy.special import softmax
 import concurrent.futures
-import asyncio
 import pandas as pd
 
 # Initialize variables for model
